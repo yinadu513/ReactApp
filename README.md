@@ -28,8 +28,9 @@ Live app can be found via Netify https://imageappv2.netlify.app/
 - Per the reference styles and html, the thumbnail image should have a border when selected.
 
 ## Install
-=======
-This template viewer is modeled after the filmstrip folder view in Windows Explorer.
+  1. git clone https://github.com/yinadu513/ReactApp.git
+  2. npm install
+  3. npm start
 
 ## Live demo
 Live app can be found via Netify https://imageapp.netlify.app/
