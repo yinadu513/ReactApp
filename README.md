@@ -4,7 +4,7 @@ This template viewer is modeled after the filmstrip folder view in Windows Explo
 
 ## Live demo
 
-Live app can be found via Netify https://imageapp.netlify.app/
+Live app can be found via Netify https://imageappv2.netlify.app/
 
 ## Development Description
 
