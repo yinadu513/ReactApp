@@ -1,5 +1,4 @@
 ## ImageApp
-<<<<<<< HEAD
 
 This template viewer is modeled after the filmstrip folder view in Windows Explorer.
 
@@ -35,7 +34,4 @@ This template viewer is modeled after the filmstrip folder view in Windows Explo
 ## Live demo
 Live app can be found via Netify https://imageapp.netlify.app/
 
-## Development Description
 
--ddssfd
->>>>>>> 24d45e33239a7c64c3e9abbefd055722a6254f9f
