@@ -9,7 +9,7 @@ class ImgMain extends Component {
           <div className="row p-2">
             <div className="col-lg-8">
               <img
-                className="bg-white border"
+                className="bg-white shadow p-3 mb-5 rounded"
                 src={imgPath + this.props.targetImg.image}
                 height="360"
                 width="430"
@@ -24,13 +24,18 @@ class ImgMain extends Component {
                         {key}
                       </span>
                       {value}
+                      <hr />
                     </p>
                   );
                 })}
 
                 <button
                   type="button"
-                  className="btn btn-warning m-2"
+                  className={
+                    this.props.imgInCart
+                      ? "btn btn-secondary m-2 not-allowed"
+                      : "btn btn-warning m-2"
+                  }
                   disabled={this.props.imgInCart}
                   onClick={() => {
                     this.props.onhandleAdd(this.props.targetImg.id);
@@ -40,7 +45,11 @@ class ImgMain extends Component {
                 </button>
                 <button
                   type="button"
-                  className="btn btn-primary m-2"
+                  className={
+                    this.props.imgInCart
+                      ? "btn btn-primary m-2"
+                      : "btn btn-secondary m-2 not-allowed"
+                  }
                   disabled={!this.props.imgInCart}
                   onClick={() => {
                     this.props.onhandleRemove(this.props.targetImg.id);

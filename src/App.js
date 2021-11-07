@@ -85,15 +85,17 @@ class App extends Component {
           </div>
         </div>
         <div className="container">
-          <div className="row align-items-center">
+          <div className="row align-items-center border mt-1">
             <div className="col-sm-2 p-2">
-              <a className="btn">
-                <img
-                  src="/previous.png"
-                  alt="Pervious"
-                  onClick={this.onClickPrevious}
-                />
-              </a>
+              {ImgData.length > 4 && this.state.counter > 0 && (
+                <a className="btn previous">
+                  <img
+                    src="/previous.png"
+                    alt="Pervious"
+                    onClick={this.onClickPrevious}
+                  />
+                </a>
+              )}
             </div>
             {this.state.imgInDisplay.map((i) => (
               <div className="col-lg-2 p-2" key={i.id}>
@@ -105,18 +107,38 @@ class App extends Component {
               </div>
             ))}
             <div className="col-sm-2 p-2">
-              <a className="btn">
-                <img
-                  src="/next.png"
-                  alt="Pervious"
-                  onClick={this.onClickNext}
-                />
-              </a>
+              {ImgData.length > 4 && this.state.counter < ImgData.length - 1 && (
+                <a className="btn next">
+                  <img src="/next.png" alt="Next" onClick={this.onClickNext} />
+                </a>
+              )}
             </div>
           </div>
         </div>
       </div>
     );
+  }
+
+  componentDidMount() {
+    fetch("https://api.example.com/items")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            isLoaded: true,
+            items: result.items,
+          });
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          this.setState({
+            isLoaded: true,
+            error,
+          });
+        }
+      );
   }
 }
 
