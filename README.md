@@ -32,7 +32,4 @@ Live app can be found via Netify https://imageappv2.netlify.app/
   2. npm install
   3. npm start
 
-## Live demo
-Live app can be found via Netify https://imageapp.netlify.app/
-
 
