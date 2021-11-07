@@ -1,4 +1,5 @@
 ## ImageApp
+<<<<<<< HEAD
 
 This template viewer is modeled after the filmstrip folder view in Windows Explorer.
 
@@ -28,3 +29,13 @@ Live app can be found via Netify https://imageapp.netlify.app/
 - Per the reference styles and html, the thumbnail image should have a border when selected.
 
 ## Install
+=======
+This template viewer is modeled after the filmstrip folder view in Windows Explorer.
+
+## Live demo
+Live app can be found via Netify https://imageapp.netlify.app/
+
+## Development Description
+
+-ddssfd
+>>>>>>> 24d45e33239a7c64c3e9abbefd055722a6254f9f
